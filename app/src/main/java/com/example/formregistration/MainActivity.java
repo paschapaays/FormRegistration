@@ -36,27 +36,19 @@ public class MainActivity extends AppCompatActivity {
         spinnerFakultas.setAdapter(adapter);
 
         btnRegister.setOnClickListener(v -> {
-            String nim = etNim.getText().toString().trim();
-            String name = etName.getText().toString().trim();
-            String email = etEmail.getText().toString().trim();
-            String phone = etPhone.getText().toString().trim();
+            String nim = etNim.getText().toString();
+            String name = etName.getText().toString();
+            String email = etEmail.getText().toString();
+            String phone = etPhone.getText().toString();
             String fakultas = spinnerFakultas.getSelectedItem().toString();
-            String jurusan = etJurusan.getText().toString().trim();
+            String jurusan = etJurusan.getText().toString();
 
-            // Validasi input
             if (nim.isEmpty() || name.isEmpty() || email.isEmpty() || phone.isEmpty() || jurusan.isEmpty()) {
                 Toast.makeText(MainActivity.this, "Semua field wajib diisi!", Toast.LENGTH_SHORT).show();
                 return;
             }
 
-            // Cek format email sederhana
-            if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-                Toast.makeText(MainActivity.this, "Format email tidak valid!", Toast.LENGTH_SHORT).show();
-                return;
-            }
-
-            // Kirim data ke SummaryActivity
-            Intent intent = new Intent(MainActivity.this, SummeryActivity.class);
+            Intent intent = new Intent(MainActivity.this, SecondActivity.class);
             intent.putExtra("nim", nim);
             intent.putExtra("name", name);
             intent.putExtra("email", email);
