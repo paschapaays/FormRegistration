@@ -1,71 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_registration"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp">
 
+    <!-- Judul Form -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Registration Form"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:layout_gravity="center" />
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp" />
 
+    <!-- Input NIM -->
     <EditText
         android:id="@+id/et_nim"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="NIM"
-        android:inputType="number" />
+        android:inputType="number"
+        android:layout_marginBottom="8dp"
+        android:minHeight="48dp"
+        android:padding="12dp"/>
 
+    <!-- Input Nama Lengkap -->
     <EditText
         android:id="@+id/et_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Nama Lengkap"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:layout_marginBottom="8dp"
+        android:minHeight="48dp"
+        android:padding="12dp" />
 
+    <!-- Input Email -->
     <EditText
         android:id="@+id/et_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Email"
-        android:inputType="textEmailAddress" />
+        android:inputType="textEmailAddress"
+        android:layout_marginBottom="8dp"
+        android:minHeight="48dp"
+        android:padding="12dp" />
 
+    <!-- Input Phone -->
     <EditText
         android:id="@+id/et_phone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Phone"
-        android:inputType="phone" />
+        android:inputType="phone"
+        android:layout_marginBottom="8dp"
+        android:minHeight="48dp"
+        android:padding="12dp"/>
+
+    <!-- Spinner Fakultas -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fakultas"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp" />
 
     <Spinner
         android:id="@+id/spinner_fakultas"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:minHeight="48dp"
+        android:padding="12dp"/>
 
+    <!-- Input Jurusan -->
     <EditText
         android:id="@+id/et_jurusan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Jurusan"
-        android:inputType="text" />
+        android:inputType="text"
+        android:layout_marginBottom="16dp"
+        android:minHeight="48dp"
+        android:padding="12dp"/>
 
+    <!-- Tombol Register dan Reset -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_marginTop="16dp">
+        android:gravity="center">
 
         <Button
             android:id="@+id/btn_register"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Register" />
+            android:text="Register"
+            android:layout_marginEnd="8dp" />
 
         <Button
             android:id="@+id/btn_reset"
